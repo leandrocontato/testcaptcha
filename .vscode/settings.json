@@ -1,0 +1,5 @@
+{
+    // Use o script personalizado para encontrar o caminho de visualização ao vivo
+    // "livePreview.customPreviewPathScript": "${workspaceFolder}/.vscode/livePreviewScript.js"
+    "livePreview.defaultPreviewPath": "/index.html, /index.php, /view/"
+}
