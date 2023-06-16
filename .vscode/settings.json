@@ -1,5 +1,6 @@
 {
-    // Use o script personalizado para encontrar o caminho de visualização ao vivo
-    // "livePreview.customPreviewPathScript": "${workspaceFolder}/.vscode/livePreviewScript.js"
-    "livePreview.defaultPreviewPath": "/index.html, /index.php, /view/"
+    "livePreview.matchGlobPattern": "**/*.{html,php}",
+    "livePreview.previewOnFileOpen": true,
+    "livePreview.serverRoot": "${workspaceFolder}",
+    "livePreview.serverPort": 3002
 }
