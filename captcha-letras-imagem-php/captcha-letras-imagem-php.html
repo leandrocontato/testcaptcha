@@ -14,11 +14,12 @@
 		<div class="col-xs-12" style="padding-bottom: 30px;" onload="generate()">
 			<div style="display: flex; justify-content: center; align-items: center;">
 				<div class="rounded-border"
-					style="background-color: #ced0d1; padding: 15px; display: flex; flex-direction: column;">
-					<div style="text-align: left;">
-						<p style="color:#1384AD; text-align: left;">Digite as letras informadas</p>
-						<div style="display: flex; align-items: center;">
-							<img id="captchaImg"
+				style="background-color: #ced0d1; padding: 15px; display: flex; flex-direction: column;">
+				<div style="text-align: left;">
+					<p style="color:#1384AD; text-align: left;">Digite as letras informadas</p>
+					<div style="display: flex; align-items: center;">
+						<img id="captchaImg"
+						<div class="cx_captcha"><?php echo CaptchaSys::getTagImgCaptcha( CoreDefault::$ViewUrl ."public/script/captcha.php" , true, CoreDefault::$CoreUrl.'Lib/CaptchaSys/images/reload.png' ); ?></div><br />
 								src="<?php echo CoreDefault::$ViewUrl . 'public/script/captcha.php'; ?>"
 								alt="Captcha Image" style="margin-bottom: 10px;">
 							<button id="reloadCaptcha" onclick="reloadCaptcha()"
@@ -85,6 +86,11 @@
 			}
 		};
 	</script>
+
 </body>
 
 </html>
+<?php 
+if( isset($_SESSION[ session_id() ]["CaptchaSys"]) && isset($_SESSION[ session_id() ]["CaptchaSys"]["msg"]) ) {
+}
+?>
