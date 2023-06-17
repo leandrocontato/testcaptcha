@@ -1,7 +1,12 @@
 <div class="recaptcha-div">
     <div class="g-recaptcha" data-sitekey="6Le6eDkbAAAAADTnU__BGW5EgZ5nh2Mc7c7Qp-XX">
         <div style="width: 304px; height: 78px;">
-            <div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Le6eDkbAAAAADTnU__BGW5EgZ5nh2Mc7c7Qp-XX&amp;co=aHR0cHM6Ly9maW5hbmNlaXJvLmhvc3RnYXRvci5jb20uYnI6NDQz&amp;hl=pt-BR&amp;v=FFtxPnbuZxq6kkeHkQJR2MNQ&amp;size=normal&amp;cb=33v666v0ztcr" width="304" height="78" role="presentation" name="a-68dkk12v7gif" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+            <div><iframe title="reCAPTCHA"
+                    src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Le6eDkbAAAAADTnU__BGW5EgZ5nh2Mc7c7Qp-XX&amp;co=aHR0cHM6Ly9maW5hbmNlaXJvLmhvc3RnYXRvci5jb20uYnI6NDQz&amp;hl=pt-BR&amp;v=FFtxPnbuZxq6kkeHkQJR2MNQ&amp;size=normal&amp;cb=33v666v0ztcr"
+                    width="304" height="78" role="presentation" name="a-68dkk12v7gif" frameborder="0" scrolling="no"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+            </div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
         </div><iframe style="display: none;"></iframe>
     </div>
 </div>
@@ -202,7 +207,8 @@
             <img class="logorecaptcha" src="view/public/image/recaptcha.png" alt="Recaptcha Image">
         </div>
         <div class="linha-de-baixo">
-            <a class="privacidade" href="https://www.google.com/intl/pt-BR/policies/privacy/" target="_blank">Privacidade</a>
+            <a class="privacidade" href="https://www.google.com/intl/pt-BR/policies/privacy/"
+                target="_blank">Privacidade</a>
             <span class="traco"> - </span>
             <a class="termos" href="https://www.google.com/intl/pt-BR/policies/terms/" target="_blank">Termos</a>
         </div>
@@ -210,7 +216,7 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const checkboxIcon = document.querySelector('.icone-checkbox');
         const spinner = document.querySelector('.spinner');
         const spinnerOverlay = document.querySelector('.spinner-overlay');
@@ -221,16 +227,16 @@
         let isChecked = false;
         let isExpired = false;
 
-        checkboxIcon.addEventListener('click', function() {
+        checkboxIcon.addEventListener('click', function () {
             if (!isChecked) {
                 spinnerOverlay.style.opacity = '1';
                 spinner.style.opacity = '1';
 
-                setTimeout(function() {
+                setTimeout(function () {
                     spinnerOverlay.style.opacity = '0';
                     spinner.style.opacity = '0';
 
-                    setTimeout(function() {
+                    setTimeout(function () {
                         checkboxIcon.classList.add('checkbox-confere');
                         checkboxIcon.style.opacity = '1';
                         confereIcon.style.opacity = '1';
@@ -245,12 +251,12 @@
             }
         });
 
-        setTimeout(function() {
+        setTimeout(function () {
             if (!isChecked) {
                 spinnerOverlay.style.opacity = '0';
                 spinner.style.opacity = '0';
 
-                setTimeout(function() {
+                setTimeout(function () {
                     isExpired = true;
                     checkboxIcon.classList.remove('checkbox-confere');
                     checkboxIcon.classList.add('icone-expirado');
